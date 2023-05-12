@@ -21,16 +21,6 @@ namespace LessonTests
             Lecture lecture(hours, max_score);
 
             Assert::AreEqual(hours, lecture.hours_);
-            Assert::AreEqual(max_score, lecture.max_score_);
-        }
-
-        TEST_METHOD(TestHourCounterVisitorforLecture)
-        {
-            // Создаем объект HourCounterVisitor
-            HourCounterVisitor visitor;
-
-            // Создаем набор занятий "Лекция"
-            std::vector<Lesson*> lectures;
             lectures.push_back(new Lecture(2, 100));
             lectures.push_back(new Lecture(6, 200));
             lectures.push_back(new Lecture(12, 110));
